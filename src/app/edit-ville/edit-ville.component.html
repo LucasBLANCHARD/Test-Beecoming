@@ -1,0 +1,36 @@
+<div class="subscribe-box">
+  <h2>Créez une nouvelle ville !</h2>
+  <form class="subscribe" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-group">
+      <label for="nom">
+        Nom de la ville
+      </label>
+      <input type="text" id="nom" class="form-control" name="nom" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="pays">
+        Pays
+      </label>
+      <input type="text" id="pays" class="form-control" name="pays" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="population">
+        Nombre d'habitants
+      </label>
+      <input type="number" id="population" class="form-control" name="population" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="latitude">
+        Latitude
+      </label>
+      <input type="number" id="latitude" class="form-control" name="latitude" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="longitude">
+        Longitude
+      </label>
+      <input type="number" id="longitude" class="form-control" name="longitude" ngModel required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Enregistrer</button>
+  </form>
+</div>

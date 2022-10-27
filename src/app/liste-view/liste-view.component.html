@@ -1,0 +1,13 @@
+<div class="col-xs-12">
+  <h2>Liste des villes</h2>
+  <ul class="list-group">
+    <app-liste *ngFor="let ville of villes; let i = index"
+    [indexOfville]="i"
+    [villeName]="ville.nom"
+    [villePays]="ville.pays"
+    [villePop]="ville.population"
+    [villeLat]="ville.latitude"
+    [villeLng]="ville.longitude"
+    [id]="ville.id"></app-liste>
+  </ul>
+</div>

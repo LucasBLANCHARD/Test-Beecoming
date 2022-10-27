@@ -1,0 +1,36 @@
+
+<h2>{{ nom }} -- Pays : {{ pays }}</h2>
+
+<p> Il y a {{ population }} d'habitants !</p>
+<p>Les coordonnées géographiques sont : {{ latitude }} et {{ longitude }} </p>
+
+<div class="subscribe-box">
+  <h2>Modifiez la ville</h2>
+  <form class="subscribe" (ngSubmit)="onEdit(f)" #f="ngForm">
+    <label for="nom">
+      Modifier le nom de la ville
+    </label>
+    <input type="text" id="nom" name="nom" [(ngModel)]="this.nom">
+    <label for="pays">
+      Modifier le Pays
+    </label>
+    <input type="text" id="pays" name="pays" [(ngModel)]="this.pays">
+    <label for="population">
+      Modifier le nombre d'habitants
+    </label>
+    <input type="number" id="population" name="population" [(ngModel)]="this.population">
+    <label for="latitude">
+      Modifier la latitude
+    </label>
+    <input type="number" id="latitude" name="latitude" [(ngModel)]="this.latitude">
+    <label for="longitude">
+      Modifier la longitude
+    </label>
+    <input type="number" id="longitude" name="longitude" [(ngModel)]="this.longitude">
+  <button type="submit" class="btn btn-primary"><span>Modifier   </span></button>
+</form>
+<a routerLink="/liste">retour à la liste</a>
+<form class="subscribe" (ngSubmit)="onRemove(f)" #f="ngForm">
+  <button type="submit" class="btn btn-danger"><span>Supprimer</span></button>
+  </form>
+</div>
